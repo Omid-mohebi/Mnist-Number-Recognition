@@ -114,7 +114,7 @@ With the current hyperparameters, the model achieves approximately 70% accuracy.
 
 ### Mini Batch Implementation (src_mini_batch.ipynb)
 
-This model was trained using mini batches with a batch size of 1024. While this approach yielded the same 70% accuracy, it took more time to complete (approximately 2 minutes overall, 1 minute more than logistic regression).
+This model was trained using mini batches with a batch size of 1024. While this approach yielded the 91% accuracy, it took more time to complete (approximately 3 minutes overall, 2 minute more than logistic regression).
 The only part which is different is:
 
 ```python
@@ -125,10 +125,10 @@ py = np.zeros(Y.shape)
 for i in range(epochs):
     for j in range(batch):
         x = X[j*batch_size:(j+1)*batch_size,:]
-        y = Y[j*batch_size:(j+1)*batch_size]
+        y = Y[j*batch_size:(j+1)*batch_size,:]
         py[j*batch_size:(j+1)*batch_size] = forward(x, W, B)
-        W -= l_rate * x.T.dot(py[j*batch_size:(j+1)*batch_size] - y) / N
-        B -= l_rate * (py[j*batch_size:(j+1)*batch_size] - y).sum(axis=0) / N
+        W -= l_rate * x.T.dot(py[j*batch_size:(j+1)*batch_size] - y) / len(x)
+        B -= l_rate * (py[j*batch_size:(j+1)*batch_size] - y).sum(axis=0) / len(x)
     loss = loss_function(py[j*batch_size:(j+1)*batch_size], y)
     loss_rate.append(loss)
 ```
