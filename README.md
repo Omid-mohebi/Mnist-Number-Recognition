@@ -112,7 +112,10 @@ print(f"Accuracy: {res * 100:.2f}%")
 
 With the current hyperparameters, the model achieves approximately 70% accuracy. Increasing the number of epochs may improve accuracy.
 
-### Mini Batch Implementation (src_mini_batch.ipynb)
+![image](https://github.com/user-attachments/assets/5de7a6b1-6173-48b3-9d07-35c484bbbf95)
+
+
+### UPDATE: Mini Batch Implementation (src_mini_batch.ipynb)
 
 This model was trained using mini batches with a batch size of 1024. While this approach yielded the 91% accuracy, it took more time to complete (approximately 3 minutes overall, 2 minute more than logistic regression).
 The only part which is different is:
@@ -132,4 +135,7 @@ for i in range(epochs):
     loss = loss_function(py[j*batch_size:(j+1)*batch_size], y)
     loss_rate.append(loss)
 ```
+
+![image](https://github.com/user-attachments/assets/1875dd7a-6cc3-4bff-9d1c-12052491739d)
+
 
