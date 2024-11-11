@@ -1,7 +1,7 @@
 # MNIST Logistic Regression Training
 
 This repository contains a simple logistic regression implementation for training on the MNIST dataset. The script reads data from a CSV file, preprocesses it, defines a neuron, and trains it to recognize handwritten digits.
-
+ 
 ## Dependencies
 
 Make sure you have the following libraries installed:
