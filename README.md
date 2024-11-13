@@ -2,6 +2,10 @@
 
 This repository contains a simple logistic regression implementation for training on the MNIST dataset. The script reads data from a CSV file, preprocesses it, defines a neuron, and trains it to recognize handwritten digits.
  
+## Dataset 
+
+You can download dataset for [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://git-disl.github.io/GTDLBench/datasets/mnist_datasets/&ved=2ahUKEwi9pvX7ktmJAxXKgP0HHf5bMCcQFnoECCEQAQ&usg=AOvVaw0-W-eFhFW_UE8Pnlj6ZYbB)
+
 ## Dependencies
 
 Make sure you have the following libraries installed:
